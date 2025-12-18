@@ -13,7 +13,7 @@ async function greet() {
 
 <template>
   <main class="container">
-    <h1>Welcome to Tauri + Vue</h1>
+    <h1 class="text-3xl font-bold text-blue-600">Welcome to Tauri + Vue</h1>
     <div class="row">
       <a href="https://vite.dev" target="_blank">
         <img src="/vite.svg" class="logo vite" alt="Vite logo" />
@@ -29,7 +29,7 @@ async function greet() {
 
     <form class="row" @submit.prevent="greet">
       <input id="greet-input" v-model="name" placeholder="Enter a name..." />
-      <button type="submit">Greet</button>
+      <t-button theme="primary" type="submit">Greet</t-button>
     </form>
     <p>{{ greetMsg }}</p>
   </main>
