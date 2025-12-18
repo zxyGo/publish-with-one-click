@@ -30,9 +30,12 @@ importers:
       '@tauri-apps/cli':
         specifier: ^2
         version: 2.9.6
+      '@types/node':
+        specifier: ^25.0.3
+        version: 25.0.3
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
-        version: 5.2.4(vite@6.4.1(jiti@2.6.1))(vue@3.5.25(typescript@5.6.3))
+        version: 5.2.4(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1))(vue@3.5.25(typescript@5.6.3))
       eslint:
         specifier: ^9.39.2
         version: 9.39.2(jiti@2.6.1)
@@ -56,10 +59,10 @@ importers:
         version: 8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.6.3)
       unocss:
         specifier: ^66.5.10
-        version: 66.5.10(postcss@8.5.6)(vite@6.4.1(jiti@2.6.1))
+        version: 66.5.10(postcss@8.5.6)(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1))
       vite:
         specifier: ^6.0.3
-        version: 6.4.1(jiti@2.6.1)
+        version: 6.4.1(@types/node@25.0.3)(jiti@2.6.1)
       vue-tsc:
         specifier: ^2.1.10
         version: 2.2.12(typescript@5.6.3)
@@ -553,6 +556,9 @@ packages:
 
   '@types/lodash@4.17.21':
     resolution: {integrity: sha512-FOvQ0YPD5NOfPgMzJihoT+Za5pdkDJWcbpuj1DjaKZIr/gxodQjY/uWEFlTNqW2ugXHUiL8lRQgw63dzKHZdeQ==}
+
+  '@types/node@25.0.3':
+    resolution: {integrity: sha512-W609buLVRVmeW693xKfzHeIV6nJGGz98uCPfeXI1ELMLXVeKYZ9m15fAMSaUPBHYLGFsVRcMmSCksQOrZV9BYA==}
 
   '@types/sortablejs@1.15.9':
     resolution: {integrity: sha512-7HP+rZGE2p886PKV9c9OJzLBI6BBJu1O7lJGYnPyG3fS4/duUCcngkNCjsLwIMV+WMqANe3tt4irrXHSIe68OQ==}
@@ -1352,6 +1358,9 @@ packages:
   unconfig@7.4.2:
     resolution: {integrity: sha512-nrMlWRQ1xdTjSnSUqvYqJzbTBFugoqHobQj58B2bc8qxHKBBHMNNsWQFP3Cd3/JZK907voM2geYPWqD4VK3MPQ==}
 
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
+
   unocss@66.5.10:
     resolution: {integrity: sha512-h3OjHVKsYFiet7ZSgxD6+odC1bpx+N0JYP2bWy/vcqjrApaZmYg4CKmvxCFNxw1+qVoxyfhhjcVZHGUpf9jaKA==}
     engines: {node: '>=14'}
@@ -1827,6 +1836,10 @@ snapshots:
 
   '@types/lodash@4.17.21': {}
 
+  '@types/node@25.0.3':
+    dependencies:
+      undici-types: 7.16.0
+
   '@types/sortablejs@1.15.9': {}
 
   '@types/tinycolor2@1.4.6': {}
@@ -1924,13 +1937,13 @@ snapshots:
       '@typescript-eslint/types': 8.50.0
       eslint-visitor-keys: 4.2.1
 
-  '@unocss/astro@66.5.10(vite@6.4.1(jiti@2.6.1))':
+  '@unocss/astro@66.5.10(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1))':
     dependencies:
       '@unocss/core': 66.5.10
       '@unocss/reset': 66.5.10
-      '@unocss/vite': 66.5.10(vite@6.4.1(jiti@2.6.1))
+      '@unocss/vite': 66.5.10(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1))
     optionalDependencies:
-      vite: 6.4.1(jiti@2.6.1)
+      vite: 6.4.1(@types/node@25.0.3)(jiti@2.6.1)
 
   '@unocss/cli@66.5.10':
     dependencies:
@@ -2058,7 +2071,7 @@ snapshots:
     dependencies:
       '@unocss/core': 66.5.10
 
-  '@unocss/vite@66.5.10(vite@6.4.1(jiti@2.6.1))':
+  '@unocss/vite@66.5.10(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1))':
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@unocss/config': 66.5.10
@@ -2069,11 +2082,11 @@ snapshots:
       pathe: 2.0.3
       tinyglobby: 0.2.15
       unplugin-utils: 0.3.1
-      vite: 6.4.1(jiti@2.6.1)
+      vite: 6.4.1(@types/node@25.0.3)(jiti@2.6.1)
 
-  '@vitejs/plugin-vue@5.2.4(vite@6.4.1(jiti@2.6.1))(vue@3.5.25(typescript@5.6.3))':
+  '@vitejs/plugin-vue@5.2.4(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1))(vue@3.5.25(typescript@5.6.3))':
     dependencies:
-      vite: 6.4.1(jiti@2.6.1)
+      vite: 6.4.1(@types/node@25.0.3)(jiti@2.6.1)
       vue: 3.5.25(typescript@5.6.3)
 
   '@volar/language-core@2.4.15':
@@ -2748,9 +2761,11 @@ snapshots:
       quansync: 1.0.0
       unconfig-core: 7.4.2
 
-  unocss@66.5.10(postcss@8.5.6)(vite@6.4.1(jiti@2.6.1)):
+  undici-types@7.16.0: {}
+
+  unocss@66.5.10(postcss@8.5.6)(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1)):
     dependencies:
-      '@unocss/astro': 66.5.10(vite@6.4.1(jiti@2.6.1))
+      '@unocss/astro': 66.5.10(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1))
       '@unocss/cli': 66.5.10
       '@unocss/core': 66.5.10
       '@unocss/postcss': 66.5.10(postcss@8.5.6)
@@ -2768,9 +2783,9 @@ snapshots:
       '@unocss/transformer-compile-class': 66.5.10
       '@unocss/transformer-directives': 66.5.10
       '@unocss/transformer-variant-group': 66.5.10
-      '@unocss/vite': 66.5.10(vite@6.4.1(jiti@2.6.1))
+      '@unocss/vite': 66.5.10(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1))
     optionalDependencies:
-      vite: 6.4.1(jiti@2.6.1)
+      vite: 6.4.1(@types/node@25.0.3)(jiti@2.6.1)
     transitivePeerDependencies:
       - postcss
       - supports-color
@@ -2788,7 +2803,7 @@ snapshots:
 
   validator@13.15.23: {}
 
-  vite@6.4.1(jiti@2.6.1):
+  vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2797,6 +2812,7 @@ snapshots:
       rollup: 4.53.5
       tinyglobby: 0.2.15
     optionalDependencies:
+      '@types/node': 25.0.3
       fsevents: 2.3.3
       jiti: 2.6.1
 

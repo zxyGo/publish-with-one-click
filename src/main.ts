@@ -4,7 +4,8 @@ import TDesign from 'tdesign-vue-next'
 import 'tdesign-vue-next/es/style/index.css'
 import 'virtual:uno.css'
 import App from './App.vue'
+import router from './routers'
 
 const app = createApp(App)
-app.use(TDesign)
+app.use(router).use(TDesign)
 app.mount('#app')
