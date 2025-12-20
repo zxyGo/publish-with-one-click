@@ -6,7 +6,7 @@ const router = createRouter({
   routes: [...staticRouter, ...errorRouter]
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((_to, _from, next) => {
   // 暂时不需要登录
   next()
   //   if (to.name !== 'Login' && !localStorage.getItem('token')) {

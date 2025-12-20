@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "identifier": "com.zxyGo.publish-with-one-click",
   "build": {
-    "beforeDevCommand": "pnpm dev",
+    "beforeDevCommand": "pnpm dev:tauri",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "pnpm build",
+    "beforeBuildCommand": "pnpm build && pnpm md:build",
     "frontendDist": "../dist"
   },
   "app": {

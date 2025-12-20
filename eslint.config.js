@@ -4,7 +4,7 @@ import tseslint from 'typescript-eslint'
 import eslintConfigPrettier from 'eslint-config-prettier'
 
 export default [
-  { ignores: ['dist', 'node_modules', 'src-tauri/target'] },
+  { ignores: ['dist', 'node_modules', 'src-tauri/target', 'src/md/**'] },
   { files: ['**/*.{js,mjs,cjs,ts,vue}'] },
   { languageOptions: { globals: globals.browser } },
   ...tseslint.configs.recommended,

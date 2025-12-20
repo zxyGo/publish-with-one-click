@@ -6,6 +6,14 @@ export const menuRouter = [
     meta: {
       title: '发布'
     }
+  },
+  {
+    path: 'editor',
+    name: 'Editor',
+    component: () => import('@/views/md/index.vue'),
+    meta: {
+      title: 'Markdown 编辑器'
+    }
   }
 ]
 
