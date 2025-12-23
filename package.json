@@ -8,11 +8,12 @@
     "dev": "vite",
     "dev:tauri": "node --input-type=module -e \"import { spawn } from 'node:child_process'; const spawnCmd = (cmd, args) => spawn(cmd, args, { stdio: 'inherit', shell: true }); const a = spawnCmd('pnpm', ['dev']); const b = spawnCmd('pnpm', ['md:dev']); const shutdown = (code = 0) => { try { a.kill('SIGINT'); } catch {} try { b.kill('SIGINT'); } catch {} process.exit(code); }; process.on('SIGINT', () => shutdown(0)); process.on('SIGTERM', () => shutdown(0)); a.on('exit', (code) => shutdown(code ?? 0)); b.on('exit', (code) => shutdown(code ?? 0));\"",
     "build": "vue-tsc --noEmit && vite build",
+    "build:tauri": "pnpm build && pnpm md:build",
     "preview": "vite preview",
     "tauri": "tauri",
     "md:install": "pnpm -C src/md install",
     "md:dev": "pnpm -C src/md/apps/web dev --port 1422 --strictPort",
-    "md:build": "pnpm -C src/md/apps/web build:only -- --outDir ../../../../dist/md --emptyOutDir",
+    "md:build": "pnpm -C src/md/apps/web exec vite build --outDir ../../../../dist/md-editor --emptyOutDir",
     "lint": "eslint . --fix",
     "format": "prettier --write ."
   },

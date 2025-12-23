@@ -5,7 +5,7 @@ const isTauri = computed(() => Boolean((window as any).__TAURI__?.core))
 
 const mdUrl = computed(() => {
   if (import.meta.env.DEV) return `http://localhost:1422/`
-  return `/md/`
+  return new URL(`md-editor/index.html`, window.location.href).toString()
 })
 
 async function openEditorWindow() {
@@ -25,7 +25,7 @@ async function openEditorWindow() {
     title: `Markdown 编辑器`,
     url: mdUrl.value,
     width: 1280,
-    height: 800,
+    height: 800
   })
 
   win.once(`tauri://error`, () => {})
@@ -33,7 +33,7 @@ async function openEditorWindow() {
 </script>
 
 <template>
-  <div class="h-full w-full flex flex-col gap-3 p-3">
+  <div class="h-full w-full flex flex-col gap-3">
     <div class="flex items-center gap-2">
       <t-button theme="primary" @click="openEditorWindow">打开独立编辑器窗口</t-button>
       <div class="text-sm opacity-70">
