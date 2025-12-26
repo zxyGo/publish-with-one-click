@@ -6,6 +6,7 @@ import 'virtual:uno.css'
 import App from './App.vue'
 import router from './routers'
 
+
 const app = createApp(App)
 app.use(router).use(TDesign)
 app.mount('#app')

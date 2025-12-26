@@ -14,6 +14,14 @@ export const menuRouter = [
     meta: {
       title: 'Markdown 编辑器'
     }
+  },
+  {
+    path: 'article',
+    name: 'Article',
+    component: () => import('@/views/article/list.vue'),
+    meta: {
+      title: '文章管理'
+    }
   }
 ]
 
